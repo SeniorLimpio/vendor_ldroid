@@ -66,6 +66,16 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
+# Copy specific LimpioDroid files
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/app/AppSetting.apk:system/app/AppSetting.apk \
+    vendor/slim/prebuilt/common/app/Xposed_Installer.apk:system/app/Xposed_Installer.apk
+
+# Added xbin files
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/xbin/zip:system/xbin/zip \
+    vendor/slim/prebuilt/common/xbin/zipalign:system/xbin/zipalign
+
 # Optional packages
 PRODUCT_PACKAGES += \
     Basic \
@@ -90,12 +100,23 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     DashClock
 
+# Terminal Emulator
+PRODUCT_COPY_FILES +=  \
+    vendor/slim/prebuilt/Term.apk:system/app/Term.apk \
+    vendor/slim/prebuilt/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
     e2fsck \
     mke2fs \
-    tune2fs
+    tune2fs \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    oprofiled \
+    sqlite3 \
+    strace
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
