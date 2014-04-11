@@ -69,7 +69,10 @@ PRODUCT_PACKAGES += \
 # Copy specific LimpioDroid files
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/app/AppSetting.apk:system/app/AppSetting.apk \
-    vendor/slim/prebuilt/common/app/Xposed_Installer.apk:system/app/Xposed_Installer.apk
+    vendor/slim/prebuilt/common/app/Xposed_Installer.apk:system/app/Xposed_Installer.apk \
+    vendor/slim/prebuilt/common/app/TitaniumBackup.apk:system/app/TitaniumBackup.apk \
+    vendor/slim/prebuilt/common/app/Greenify.apk:system/app/Greenify.apk \
+    vendor/slim/prebuilt/common/app/BoefflaConfig.apk:system/app/BoefflaConfig.apk
 
 # Added xbin files
 PRODUCT_COPY_FILES += \
@@ -83,7 +86,12 @@ PRODUCT_PACKAGES += \
     NoiseField \
     Galaxy4 \
     LiveWallpapersPicker \
-    PhaseBeam
+    PhaseBeam \
+
+# Screen recorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder \
+    libscreenrecorder
 
 # DSPManager
 PRODUCT_PACKAGES += \
