@@ -79,6 +79,36 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/xbin/zip:system/xbin/zip \
     vendor/slim/prebuilt/common/xbin/zipalign:system/xbin/zipalign
 
+# init.d support
+ PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit \
+    vendor/slim/prebuilt/common/etc/helpers.sh:system/etc/helpers.sh \
+    vendor/slim/prebuilt/common/etc/init.d.cfg:system/etc/init.d.cfg \
+    vendor/slim/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/slim/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
+    vendor/slim/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
+    vendor/slim/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
+    vendor/slim/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
+    vendor/slim/prebuilt/common/etc/init.d/05freemem:system/etc/init.d/05freemem \
+    vendor/slim/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
+    vendor/slim/prebuilt/common/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
+    vendor/slim/prebuilt/common/etc/init.d/09cron:system/etc/init.d/09cron \
+    vendor/slim/prebuilt/common/etc/init.d/10sdboost:system/etc/init.d/10sdboost \
+    vendor/slim/prebuilt/common/etc/init.d/11battery:system/etc/init.d/11battery \
+    vendor/slim/prebuilt/common/etc/init.d/12touch:system/etc/init.d/12touch \
+    vendor/slim/prebuilt/common/etc/init.d/13minfree:system/etc/init.d/13minfree \
+    vendor/slim/prebuilt/common/etc/init.d/14gpurender:system/etc/init.d/14gpurender \
+    vendor/slim/prebuilt/common/etc/init.d/15sleepers:system/etc/init.d/15sleepers \
+    vendor/slim/prebuilt/common/etc/init.d/16journalism:system/etc/init.d/16journalism \
+    vendor/slim/prebuilt/common/etc/init.d/17sqlite3:system/etc/init.d/17sqlite3 \
+    vendor/slim/prebuilt/common/etc/init.d/18wifisleep:system/etc/init.d/18wifisleep \
+    vendor/slim/prebuilt/common/etc/init.d/19iostats:system/etc/init.d/19iostats \
+    vendor/slim/prebuilt/common/etc/init.d/20setrenice:system/etc/init.d/20setrenice \
+    vendor/slim/prebuilt/common/etc/init.d/21tweaks:system/etc/init.d/21tweaks \
+    vendor/slim/prebuilt/common/etc/init.d/24speedy_modified:system/etc/init.d/24speedy_modified \
+    vendor/slim/prebuilt/common/etc/init.d/25loopy_smoothness_tweak:system/etc/init.d/25loopy_smoothness_tweak \
+    vendor/slim/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks
+
 # Optional packages
 PRODUCT_PACKAGES += \
     Basic \
