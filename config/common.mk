@@ -80,15 +80,15 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/xbin/zipalign:system/xbin/zipalign
 
 # init.d support
- PRODUCT_COPY_FILES += \
+PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit \
     vendor/slim/prebuilt/common/etc/helpers.sh:system/etc/helpers.sh \
     vendor/slim/prebuilt/common/etc/init.d.cfg:system/etc/init.d.cfg \
     vendor/slim/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
-    vendor/slim/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
-    vendor/slim/prebuilt/common/etc/init.d/01zipalign:system/etc/init.d/01zipalign \
-    vendor/slim/prebuilt/common/etc/init.d/02sysctl:system/etc/init.d/02sysctl \
-    vendor/slim/prebuilt/common/etc/init.d/03firstboot:system/etc/init.d/03firstboot \
+    vendor/slim/prebuilt/common/etc/init.d/01check:system/etc/init.d/00check \
+    vendor/slim/prebuilt/common/etc/init.d/02zipalign:system/etc/init.d/01zipalign \
+    vendor/slim/prebuilt/common/etc/init.d/03sysctl:system/etc/init.d/02sysctl \
+    vendor/slim/prebuilt/common/etc/init.d/04firstboot:system/etc/init.d/03firstboot \
     vendor/slim/prebuilt/common/etc/init.d/05freemem:system/etc/init.d/05freemem \
     vendor/slim/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
     vendor/slim/prebuilt/common/etc/init.d/07fixperms:system/etc/init.d/07fixperms \
