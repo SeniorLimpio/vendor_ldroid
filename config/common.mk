@@ -71,7 +71,6 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/app/AppSetting.apk:system/app/AppSetting.apk \
     vendor/slim/prebuilt/common/app/Xposed_Installer.apk:system/app/Xposed_Installer.apk \
     vendor/slim/prebuilt/common/app/TitaniumBackup.apk:system/app/TitaniumBackup.apk \
-    vendor/slim/prebuilt/common/app/Greenify.apk:system/app/Greenify.apk \
     vendor/slim/prebuilt/common/app/BoefflaConfig.apk:system/app/BoefflaConfig.apk
 
 # Added xbin files
