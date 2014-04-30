@@ -142,6 +142,10 @@ PRODUCT_COPY_FILES +=  \
     vendor/slim/prebuilt/Term.apk:system/app/Term.apk \
     vendor/slim/prebuilt/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
 
+# Fixed Camera library file
+PRODUCT_COPY_FILES +=  \
+    vendor/slim/prebuilt/lib/camera.smdk4x12.so:system/lib/hw/camera.smdk4x12.so
+
 # Extra tools
 PRODUCT_PACKAGES += \
     openvpn \
