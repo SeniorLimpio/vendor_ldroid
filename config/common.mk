@@ -154,14 +154,10 @@ PRODUCT_PACKAGES += \
     tune2fs \
     mount.exfat \
     fsck.exfat \
-<<<<<<< HEAD
     mkfs.exfat \
     oprofiled \
     sqlite3 \
     strace
-=======
-    mkfs.exfat
->>>>>>> 03406a4a6784eeea4b3fac30c6af4efe3ec37e0b
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
