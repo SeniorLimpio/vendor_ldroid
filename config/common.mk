@@ -68,8 +68,8 @@ PRODUCT_PACKAGES += \
 
 # Copy specific LimpioDroid files
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/app/AppSetting.apk:system/app/AppSetting.apk \
-    vendor/slim/prebuilt/common/app/Xposed_Installer.apk:system/app/Xposed_Installer.apk \
+    vendor/slim/prebuilt/common/app/AppSettings.apk:system/app/AppSettings.apk \
+    vendor/slim/prebuilt/common/app/XposedInstaller.apk:system/app/XposedInstaller.apk \
     vendor/slim/prebuilt/common/app/TitaniumBackup.apk:system/app/TitaniumBackup.apk \
     vendor/slim/prebuilt/common/app/BoefflaConfig.apk:system/app/BoefflaConfig.apk
 
