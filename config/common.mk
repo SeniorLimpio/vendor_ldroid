@@ -66,7 +66,7 @@ PRODUCT_PACKAGES += \
     Superuser \
     su
 
-# Copy specific LimpioDroid files
+# Copy specific L-Droid files
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/app/AppSettings.apk:system/app/AppSettings.apk \
     vendor/slim/prebuilt/common/app/XposedInstaller.apk:system/app/XposedInstaller.apk \
@@ -130,10 +130,8 @@ PRODUCT_PACKAGES += \
 
 # Extra Optional packages
 PRODUCT_PACKAGES += \
-    SlimCenter \
     SlimFileManager \
     LatinIME \
-    SlimIRC \
     BluetoothExt \
     DashClock
 
