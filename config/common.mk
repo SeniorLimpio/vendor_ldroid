@@ -18,14 +18,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.android.dataroaming=false
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.build.selinux=1
-    persist.sys.root_access=3
+    ro.build.selinux=1 \
+    persist.sys.root_access=3 \
+    ro.adb.secure=3
 
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
  
 # Tether for all
-PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.dun.override=0
 
 # Disable excessive dalvik debug messages
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -167,9 +169,6 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \
-    oprofiled \
-    sqlite3 \
-    strace
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
