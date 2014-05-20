@@ -12,6 +12,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
+    persist.sys.root_access=3
+
+# Embed SuperUser
+SUPERUSER_EMBEDDED := true
+ 
+# Tether for all
+PRODUCT_PROPERTY_OVERRIDES += persist.sys.dun.override=0
 
 # Disable excessive dalvik debug messages
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -55,9 +62,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/app/NovaLauncher.apk:system/app/NovaLauncher.apk
 
-# Embed SuperUser
-SUPERUSER_EMBEDDED := true
-
 # Required packages
 PRODUCT_PACKAGES += \
     Camera \
@@ -65,6 +69,9 @@ PRODUCT_PACKAGES += \
     SpareParts \
     Superuser \
     su
+
+PRODUCT_COPY_FILES += \
+    external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
 
 # Copy specific L-Droid files
 PRODUCT_COPY_FILES += \
