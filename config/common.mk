@@ -169,6 +169,9 @@ PRODUCT_PACKAGES += \
     mount.exfat \
     fsck.exfat \
     mkfs.exfat \
+    oprofiled \
+    sqlite3 \
+    strace
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
