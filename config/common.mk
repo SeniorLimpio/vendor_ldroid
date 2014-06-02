@@ -1,3 +1,12 @@
+# Vendor hack
+#   $1 = vendor name
+#   $2 = product name
+define vendor-replace
+  $(shell mkdir -p vendor/$(1); \
+          rm -rf vendor/$(1)/$(2); \
+          ln -sf ../$(1)-extra/$(2) vendor/$(1)/$(2))
+endef
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -22,6 +31,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3 \
     ro.adb.secure=3
 
+# CM Theme Engine
+include vendor/slim/config/themes_common.mk
+
 # Embed SuperUser
 SUPERUSER_EMBEDDED := true
  
@@ -37,13 +49,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
     vendor/slim/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
-    vendor/slim/prebuilt/common/bin/50-slim.sh:system/addon.d/50-slim.sh \
+    vendor/slim/prebuilt/common/bin/50-ldroid.sh:system/addon.d/50-ldroid.sh \
     vendor/slim/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/slim/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
-# SLIM-specific init file
+# L-Droid-specific init file
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.local.rc:root/init.slim.rc
+    vendor/slim/prebuilt/common/etc/init.local.rc:root/init.ldroid.rc
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
@@ -86,7 +98,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/app/AppSettings.apk:system/app/AppSettings.apk \
     vendor/slim/prebuilt/common/app/XposedInstaller.apk:system/app/XposedInstaller.apk \
-    vendor/slim/prebuilt/common/app/TitaniumBackup.apk:system/app/TitaniumBackup.apk \
     vendor/slim/prebuilt/common/app/BoefflaConfig.apk:system/app/BoefflaConfig.apk
 
 # Added xbin files
@@ -149,7 +160,8 @@ PRODUCT_PACKAGES += \
     SlimFileManager \
     LatinIME \
     BluetoothExt \
-    DashClock
+    DashClock \
+    KernelTweaker
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
@@ -210,27 +222,28 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 endif
 
+
+
 # Versioning System
-# KitKat SlimKat freeze code
-PRODUCT_VERSION_MAJOR = 4.4.2
-PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 5.2
-ifdef SLIM_BUILD_EXTRA
-    SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
+# KitKat L-Droid freeze code
+PRODUCT_VERSION_MAJOR = 2
+PRODUCT_VERSION_MINOR = 0
+PRODUCT_VERSION_MAINTENANCE = 0
+ifdef LDROID_BUILD_EXTRA
+    LDROID_POSTFIX := -$(LDROID_BUILD_EXTRA)
 endif
-ifndef SLIM_BUILD_TYPE
-    SLIM_BUILD_TYPE := UNOFFICIAL
-    PLATFORM_VERSION_CODENAME := UNOFFICIAL
-    SLIM_POSTFIX := -$(shell date +"%Y%m%d-%H%M")
+ifndef LDROID_BUILD_TYPE
+    LDROID_BUILD_TYPE := OFFICIAL
+    PLATFORM_VERSION_CODENAME := OFFICIAL
+    LDROID_POSTFIX := -$(shell date +"%Y%m%d")
 endif
 
 # Set all versions
-SLIM_VERSION := Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(SLIM_BUILD_TYPE)$(SLIM_POSTFIX)
-SLIM_MOD_VERSION := Slim-$(SLIM_BUILD)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(SLIM_BUILD_TYPE)$(SLIM_POSTFIX)
+LDROID_VERSION := L-Droid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(LDROID_BUILD_TYPE)$(LDROID_POSTFIX)
+LDROID_MOD_VERSION := L-Droid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(LDROID_BUILD)-$(LDROID_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    slim.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.slim.version=$(SLIM_VERSION) \
-    ro.modversion=$(SLIM_MOD_VERSION)
-
+    ldroid.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+    ro.ldroid.version=$(LDROID_VERSION) \
+    ro.modversion=$(LDROID_MOD_VERSION)
