@@ -1,12 +1,3 @@
-# Vendor hack
-#   $1 = vendor name
-#   $2 = product name
-define vendor-replace
-  $(shell mkdir -p vendor/$(1); \
-          rm -rf vendor/$(1)/$(2); \
-          ln -sf ../$(1)-extra/$(2) vendor/$(1)/$(2))
-endef
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -98,12 +89,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/app/AppSettings.apk:system/app/AppSettings.apk \
     vendor/slim/prebuilt/common/app/XposedInstaller.apk:system/app/XposedInstaller.apk \
-    vendor/slim/prebuilt/common/app/BoefflaConfig.apk:system/app/BoefflaConfig.apk
+    vendor/slim/prebuilt/common/app/BoefflaConfig.apk:system/app/BoefflaConfig.apk \
 
 # Added xbin files
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/xbin/zip:system/xbin/zip \
-    vendor/slim/prebuilt/common/xbin/zipalign:system/xbin/zipalign
+    vendor/slim/prebuilt/common/xbin/zipalign:system/xbin/zipalign \
 
 # init.d support
 PRODUCT_COPY_FILES += \
@@ -133,7 +124,6 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/init.d/21tweaks:system/etc/init.d/21tweaks \
     vendor/slim/prebuilt/common/etc/init.d/24speedy_modified:system/etc/init.d/24speedy_modified \
     vendor/slim/prebuilt/common/etc/init.d/25loopy_smoothness_tweak:system/etc/init.d/25loopy_smoothness_tweak \
-    vendor/slim/prebuilt/common/etc/init.d/98tweaks:system/etc/init.d/98tweaks
 
 # Optional packages
 PRODUCT_PACKAGES += \
@@ -228,22 +218,22 @@ endif
 # KitKat L-Droid freeze code
 PRODUCT_VERSION_MAJOR = 2
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = 0
+PRODUCT_VERSION_MAINTENANCE = 0-beta
 ifdef LDROID_BUILD_EXTRA
     LDROID_POSTFIX := -$(LDROID_BUILD_EXTRA)
 endif
 ifndef LDROID_BUILD_TYPE
-    LDROID_BUILD_TYPE := OFFICIAL
-    PLATFORM_VERSION_CODENAME := OFFICIAL
+    LDROID_BUILD_TYPE := UNOFFICIAL
+    PLATFORM_VERSION_CODENAME := UNOFFICIAL
     LDROID_POSTFIX := -$(shell date +"%Y%m%d")
 endif
 
 # Set all versions
-LDROID_VERSION := L-Droid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(LDROID_BUILD_TYPE)$(LDROID_POSTFIX)
-LDROID_MOD_VERSION := L-Droid-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(LDROID_BUILD)-$(LDROID_POSTFIX)
+LDROID_VERSION := L-Droid-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)
+LDROID_MOD_VERSION := L-Droid-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-$(LDROID_BUILD)-$(LDROID_POSTFIX)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
     ldroid.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
-    ro.ldroid.version=$(LDROID_VERSION) \
+    ro.ldroid.version=v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.modversion=$(LDROID_MOD_VERSION)

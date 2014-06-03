@@ -22,5 +22,5 @@
 
 if $enable_sysctl && busybox [ -e $sysctl_conf ]; then
 	sysctl -p $sysctl_conf;
-	echo "Sysctl Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Sysctl Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

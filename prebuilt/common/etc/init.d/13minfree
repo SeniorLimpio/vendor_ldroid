@@ -10,6 +10,6 @@ if $minfree; then
 		echo "4" > /proc/sys/vm/dirty_background_ratio;
 		echo "0,1,2,4,6,15" > /sys/module/lowmemorykiller/parameters/adj;
 		echo "2560,4096,6144,12288,14336,18432" > /sys/module/lowmemorykiller/parameters/minfree;
-		echo "Minfree Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+		echo "Minfree Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 	fi
 fi

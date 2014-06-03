@@ -5,7 +5,7 @@
 
 export C=/tmp/backupdir
 export S=/system
-export V=Slim-4.4
+export V=LDroid-4.4
 
 # Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
@@ -20,9 +20,9 @@ restore_addon_d() {
   rm -rf /tmp/addon.d/
 }
 
-# Check for proper Slim version
+# Check for proper L-Droid version
 check_version() {
-  if ( ! grep -q "ro.slim.version=$V.*" /system/build.prop); then
+  if ( ! grep -q "ro.ldroid.version=$V.*" /system/build.prop); then
     echo "Not running backup from incompatible version"
     exit
   fi

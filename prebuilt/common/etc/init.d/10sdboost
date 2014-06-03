@@ -22,5 +22,5 @@
 
 if $sd_boost && busybox [ -e $read_ahead_file ]; then
 	busybox echo $read_ahead_kb > $read_ahead_file;
-	echo "SDCard Boost Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "SDCard Boost Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

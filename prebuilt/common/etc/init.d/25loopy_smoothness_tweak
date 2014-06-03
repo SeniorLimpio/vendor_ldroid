@@ -123,5 +123,5 @@ if $loopy_smooth; then
 		echo "LST Debug: Done"
 		echo ""
 	fi;
-	echo "Loopy Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Loopy Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

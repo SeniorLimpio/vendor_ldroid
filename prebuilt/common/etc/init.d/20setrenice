@@ -15,5 +15,5 @@ if $setrenice; then
 	renice -6 `pidof com.google.android.apps.maps`;
 	renice -4 `pidof com.google.android.apps.googlevoice`;
 	renice -3 `pidof android.process.media`;
-	echo "Sentrenice Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Sentrenice Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

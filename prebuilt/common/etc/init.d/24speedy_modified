@@ -88,5 +88,5 @@ if $speedy_modified; then
 	#sysctl -w kernel.sched_shares_ratelimit=256000;
 	#sysctl -w kernel.sched_child_runs_first=0;
 	#sysctl -w kernel.threads-max=10000;
-	echo "Speedy Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Speedy Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

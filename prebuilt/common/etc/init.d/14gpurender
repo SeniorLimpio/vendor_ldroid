@@ -7,5 +7,5 @@ if $gpurender; then
 	rm /system/lib/egl/libGLES_android.so;
 	busybox sed -i '/0 0 android/d' /system/lib/egl/egl.cfg;
 	sysro;
-	echo "GPU Render Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "GPU Render Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

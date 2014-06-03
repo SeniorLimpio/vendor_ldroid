@@ -19,5 +19,5 @@ if $tweaks; then
 	echo "64000" > /proc/sys/kernel/msgmni;
 	echo "64000" > /proc/sys/kernel/msgmax;
 	echo "10" > /proc/sys/fs/lease-break-time;
-	echo "VM & Kernel Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "VM & Kernel Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

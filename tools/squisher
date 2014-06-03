@@ -139,7 +139,7 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 [ -d $REPACK/ota/system/lib/modules ] && \
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
-# Fix LCD Density for slim
+# Fix LCD Density for L-Droid
 DEVICELCD=`sed -n -e'/ro\.sf\.lcd_density/s/^.*=//p' $OUT/system/build.prop`
 if [ "$DEVICELCD" = "240" ]; then
    sed -i 's/ro.sf.lcd_density=240/ro.sf.lcd_density=182/g' $OUT/system/build.prop
@@ -173,10 +173,10 @@ CAMERARESOLUTION=`sed -n -e'/ro\.camera\.res/s/^.*=//p' $REPACK/ota/system/build
 #fi
 
 # Swap boot.img
-PREBUILTKERNEL=$OUT/system/slimkernel/boot.img
+PREBUILTKERNEL=$OUT/system/ldroidkernel/boot.img
 if [ -e "$PREBUILTKERNEL" ];then
    rm -f $REPACK/ota/boot.img
-   mv -f $REPACK/ota/system/slimkernel/boot.img $REPACK/ota/boot.img
+   mv -f $REPACK/ota/system/ldroidkernel/boot.img $REPACK/ota/boot.img
 fi
 
 # Determine what to name the new signed package

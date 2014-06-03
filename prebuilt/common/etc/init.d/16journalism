@@ -9,5 +9,5 @@ if $journalism; then
 	tune2fs -O ^has_journal /block/path/to/cache;
 	tune2fs -o journal_data_writeback /block/path/to/data;
 	tune2fs -O ^has_journal /block/path/to/data;
-	echo "Journalism Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Journalism Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

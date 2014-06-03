@@ -35,5 +35,5 @@ if $free_mem && busybox [ -e $minfree ]; then
 	setprop ro.EMPTY_APP_MEM $empty_app_mem;
 	freeram=` busybox expr $empty_app_mem \* 4 / 1024 `;
 	log -p i -t boot "Set ${freeram}mb of RAM free.";
-	echo "Freemen Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Freemen Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

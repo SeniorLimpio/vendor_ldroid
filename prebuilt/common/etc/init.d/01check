@@ -100,4 +100,4 @@ EOF
 	sysro
 fi;
 
-echo "Fusion ROM Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $LOG;
+echo "L-Droid Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $LOG;

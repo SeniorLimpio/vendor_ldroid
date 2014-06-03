@@ -26,5 +26,5 @@ if $sqlite3; then
 		echo "Database $i:  VACUUM=$resVac  REINDEX=$resIndex" | tee -a $LOG;
 	done;
 	echo "SQLite database VACUUM and REINDEX finished at $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a $LOG;
-	echo "SQLite Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "SQLite Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

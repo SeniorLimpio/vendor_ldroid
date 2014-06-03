@@ -8,5 +8,5 @@ if $touch; then
 	echo "11001" > /sys/class/touch/switch/set_touchscreen;
 	echo "13030" > /sys/class/touch/switch/set_touchscreen;
 	echo "14005" > /sys/class/touch/switch/set_touchscreen;
-	echo "Touch Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Touch Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

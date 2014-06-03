@@ -23,5 +23,5 @@
 
 if $zipalign_apks; then
 	zipalign_apks;
-	echo "Zipalign Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Zipalign Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

@@ -75,5 +75,5 @@ if $enable_cron -a is_busybox_applet_available crond; then
 	symlink_system_bin
 	export_timezone
 	set_crontab
-	echo "Cron Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Cron Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

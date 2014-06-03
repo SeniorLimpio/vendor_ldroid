@@ -23,5 +23,5 @@
 if $clear_data_cache; then
 	log -p i -t boot "Clearing all data cache ...";
 	busybox find /data/data -type d -iname "*cache*" -maxdepth 2 -mindepth 2 -exec busybox rm -rf {} ';';
-	echo "RemoveCache Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "RemoveCache Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

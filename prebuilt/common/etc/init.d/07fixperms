@@ -23,5 +23,5 @@
 
 if $fix_permissions; then
 	fix_permissions;
-	echo "Fix Permisions Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Fix Permisions Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

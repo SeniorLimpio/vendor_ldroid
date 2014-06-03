@@ -9,5 +9,5 @@ if $sleepers; then
 	echo "NO_NORMALIZED_SLEEPERS" > /sys/kernel/debug/sched_features;
 	echo "NO_NEW_FAIR_SLEEPERS" > /sys/kernel/debug/sched_features;
 	umount /sys/kernel/debug;
-	echo "Sleepers Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+	echo "Sleepers Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 fi

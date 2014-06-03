@@ -5,6 +5,6 @@
 if $iostats; then
 	if [ -e $i/queue/iostats ]; then
 		echo "0" > $i/queue/iostats;
-		echo "IO Stats Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/FusionLogs/tweaks.log;
+		echo "IO Stats Tweaks Starting At $( date +"%m-%d-%Y %H:%M:%S" )" | tee -a /data/LDroidLogs/tweaks.log;
 	fi;
 fi
