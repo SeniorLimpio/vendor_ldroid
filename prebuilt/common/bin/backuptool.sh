@@ -22,7 +22,7 @@ restore_addon_d() {
 
 # Check for proper L-Droid version
 check_version() {
-  if ( ! grep -q "ro.ldroid.version=$V.*" /system/build.prop); then
+  if ( ! grep -q "ro.modversion=L-Droid*" /system/build.prop); then
     echo "Not running backup from incompatible version"
     exit
   fi

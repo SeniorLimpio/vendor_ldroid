@@ -184,6 +184,9 @@ MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
 OUTFILE=$OUT/$MODVERSION.zip
 echo MODVERSION: $MODVERSION
 
+# Add changelog
+. $ANDROID_BUILD_TOP/vendor/slim/tools/changelog
+
 # Pack it up and sign
 printf "Zipping package..."
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )

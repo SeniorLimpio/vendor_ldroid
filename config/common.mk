@@ -87,8 +87,6 @@ PRODUCT_COPY_FILES += \
 
 # Copy specific L-Droid files
 PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/app/AppSettings.apk:system/app/AppSettings.apk \
-    vendor/slim/prebuilt/common/app/XposedInstaller.apk:system/app/XposedInstaller.apk \
     vendor/slim/prebuilt/common/app/BoefflaConfig.apk:system/app/BoefflaConfig.apk \
 
 # Added xbin files
@@ -225,7 +223,7 @@ endif
 # KitKat L-Droid freeze code
 PRODUCT_VERSION_MAJOR = 2
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = 0-beta
+PRODUCT_VERSION_MAINTENANCE = 0-beta2
 ifdef LDROID_BUILD_EXTRA
     LDROID_POSTFIX := -$(LDROID_BUILD_EXTRA)
 endif
@@ -241,6 +239,6 @@ LDROID_MOD_VERSION := L-Droid-v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     BUILD_DISPLAY_ID=$(BUILD_ID) \
-    ldroid.ota.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+    ldroid.ota.version=v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.ldroid.version=v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.modversion=$(LDROID_MOD_VERSION)
