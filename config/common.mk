@@ -153,7 +153,7 @@ PRODUCT_PACKAGES += \
     LatinIME \
     BluetoothExt \
     DashClock \
-    KernelTweaker
+    KernelTweaker \
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
