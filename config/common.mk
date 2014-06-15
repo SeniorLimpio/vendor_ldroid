@@ -154,6 +154,7 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     DashClock \
     KernelTweaker \
+    Trebuchet
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
