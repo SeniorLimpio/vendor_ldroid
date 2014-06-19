@@ -185,6 +185,15 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
+#Default buil.prop tweaks
+  PRODUCT_PROPERTY_OVERRIDES += \
+    pm.sleep.mode=1 \
+    wifi.supplicant_scan_interval=180 \
+    windowsmgr.max_events_per_sec=150 \
+    debug.performance.tuning=1 \
+    ro.ril.power_collapse=1 \
+    persist.sys.screen_on=none
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
@@ -227,7 +236,7 @@ endif
 # Versioning System
 PRODUCT_VERSION_MAJOR = 2
 PRODUCT_VERSION_MINOR = 1
-PRODUCT_VERSION_MAINTENANCE = 3
+PRODUCT_VERSION_MAINTENANCE = 7
 ifdef LDROID_BUILD_EXTRA
     LDROID_POSTFIX := -$(LDROID_BUILD_EXTRA)
 
