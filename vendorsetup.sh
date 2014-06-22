@@ -23,6 +23,7 @@ add_lunch_combo ldroid_i9100-userdebug
 add_lunch_combo ldroid_i9100g-userdebug
 add_lunch_combo ldroid_i925-userdebug
 add_lunch_combo ldroid_i9300-userdebug
+add_lunch_combo ldroid_i9500-userdebug
 add_lunch_combo ldroid_jflte-userdebug
 add_lunch_combo ldroid_ls980-userdebug
 add_lunch_combo ldroid_m7-userdebug
@@ -56,4 +57,3 @@ add_lunch_combo ldroid_vs980-userdebug
 add_lunch_combo ldroid_xt925-userdebug
 add_lunch_combo ldroid_xt926-userdebug
 add_lunch_combo ldroid_yuga-userdebug
-
