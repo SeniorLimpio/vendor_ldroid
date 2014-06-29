@@ -89,10 +89,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     external/koush/Superuser/init.superuser.rc:root/init.superuser.rc
 
-# Copy specific L-Droid files
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/app/BoefflaConfig.apk:system/app/BoefflaConfig.apk \
-
 # Added xbin files
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/xbin/zip:system/xbin/zip \
