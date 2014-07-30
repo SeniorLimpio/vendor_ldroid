@@ -244,3 +244,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.ldroid.version=v$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
     ro.modversion=$(LDROID_MOD_VERSION)
     ro.ldroid.buildtype=$(LDROID_BUILD_TYPE)
+
+ifeq ($(USE_PREBUILT_CHROMIUM),1)
+ifeq ($(PRODUCT_PREBUILT_WEBVIEWCHROMIUM),yes)
+
+$(call inherit-product-if-exists, prebuilts/chromium/$(TARGET_DEVICE)/chromium_prebuilt.mk)
+
+endif
+endif
