@@ -1,3 +1,4 @@
+add_lunch_combo ldroid_bacon-userdebug
 add_lunch_combo ldroid_captivatemtd-userdebug
 add_lunch_combo ldroid_crespo-userdebug
 add_lunch_combo ldroid_crespo4g-userdebug
