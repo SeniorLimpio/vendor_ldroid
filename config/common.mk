@@ -152,7 +152,13 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     DashClock \
     KernelTweaker \
-    Trebuchet
+    Trebuchet \
+    LiquidWeather
+
+# HFM Files
+PRODUCT_COPY_FILES += \
+    vendor/liquid/prebuilt/etc/hosts.alt:system/etc/hosts.alt \
+    vendor/liquid/prebuilt/etc/hosts.og:system/etc/hosts.og
 
 # Terminal Emulator
 PRODUCT_COPY_FILES +=  \
