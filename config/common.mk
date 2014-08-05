@@ -132,6 +132,10 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam \
 
+# Viper4Android
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/etc/viper/ViPER4Android.apk:system/app/ViPER4Android.apk
+
 # Screen recorder
 PRODUCT_PACKAGES += \
     ScreenRecorder \
@@ -139,8 +143,6 @@ PRODUCT_PACKAGES += \
 
 # DSPManager
 PRODUCT_PACKAGES += \
-    DSPManager \
-    libcyanogen-dsp \
     audio_effects.conf
 
 # Extra Optional packages
