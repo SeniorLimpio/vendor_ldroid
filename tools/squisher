@@ -37,7 +37,7 @@ if [ ! -f "$OTAPACKAGE" ]; then
     exit 1
 fi
 
-OPTICHARGER=$ANDROID_BUILD_TOP/vendor/slim/tools/opticharger
+OPTICHARGER=$ANDROID_BUILD_TOP/vendor/ldroid/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 DELETE_MEDIA="*.qmg"
@@ -185,7 +185,7 @@ OUTFILE=$OUT/$MODVERSION.zip
 echo MODVERSION: $MODVERSION
 
 # Add changelog
-. $ANDROID_BUILD_TOP/vendor/slim/tools/changelog
+. $ANDROID_BUILD_TOP/vendor/ldroid/tools/changelog
 
 # Pack it up and sign
 printf "Zipping package..."

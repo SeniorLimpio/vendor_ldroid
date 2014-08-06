@@ -1,1 +1,1 @@
-PRODUCT_PACKAGE_OVERLAYS += vendor/slim/overlay/multicarrier
+PRODUCT_PACKAGE_OVERLAYS += vendor/ldroid/overlay/multicarrier
