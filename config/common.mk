@@ -80,7 +80,6 @@ PRODUCT_COPY_FILES += \
 
 # Required packages
 PRODUCT_PACKAGES += \
-    Camera \
     Development \
     SpareParts \
     Superuser \
@@ -154,7 +153,6 @@ PRODUCT_PACKAGES += \
     KernelTweaker \
     Trebuchet \
     LiquidWeather \
-    Camera
 
 # HFM Files
 PRODUCT_COPY_FILES += \
@@ -165,10 +163,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     vendor/ldroid/prebuilt/Term.apk:system/app/Term.apk \
     vendor/ldroid/prebuilt/lib/libjackpal-androidterm4.so:system/lib/libjackpal-androidterm4.so
-
-# Fixed Camera library file
-PRODUCT_COPY_FILES +=  \
-    vendor/ldroid/prebuilt/lib/camera.smdk4x12.so:system/lib/hw/camera.smdk4x12.so
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -192,8 +186,6 @@ PRODUCT_PACKAGES += \
 
 #Default buil.prop tweaks
   PRODUCT_PROPERTY_OVERRIDES += \
-    pm.sleep.mode=1 \
-    wifi.supplicant_scan_interval=180 \
     windowsmgr.max_events_per_sec=150 \
     debug.performance.tuning=1 \
     ro.ril.power_collapse=1 \
@@ -241,7 +233,7 @@ endif
 # Versioning System
 PRODUCT_VERSION_MAJOR = 3
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = 0
+PRODUCT_VERSION_MAINTENANCE = 1
 ifdef LDROID_BUILD_EXTRA
     LDROID_POSTFIX := -$(LDROID_BUILD_EXTRA)
 
