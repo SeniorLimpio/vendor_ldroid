@@ -131,10 +131,6 @@ PRODUCT_PACKAGES += \
     LiveWallpapersPicker \
     PhaseBeam \
 
-# Viper4Android
-PRODUCT_COPY_FILES += \
-    vendor/ldroid/prebuilt/common/etc/viper/ViPER4Android.apk:system/app/ViPER4Android.apk
-
 # Screen recorder
 PRODUCT_PACKAGES += \
     ScreenRecorder \
@@ -142,6 +138,8 @@ PRODUCT_PACKAGES += \
 
 # DSPManager
 PRODUCT_PACKAGES += \
+    DSPManager \
+    libcyanogen-dsp \
     audio_effects.conf
 
 # Extra Optional packages
@@ -152,7 +150,6 @@ PRODUCT_PACKAGES += \
     DashClock \
     KernelTweaker \
     Trebuchet \
-    LiquidWeather \
 
 # HFM Files
 PRODUCT_COPY_FILES += \
@@ -183,13 +180,6 @@ PRODUCT_PACKAGES += \
     libstagefright_soft_ffmpegvdec \
     libFFmpegExtractor \
     libnamparser
-
-#Default buil.prop tweaks
-  PRODUCT_PROPERTY_OVERRIDES += \
-    windowsmgr.max_events_per_sec=150 \
-    debug.performance.tuning=1 \
-    ro.ril.power_collapse=1 \
-    persist.sys.screen_on=none
 
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
