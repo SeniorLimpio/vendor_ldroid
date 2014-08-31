@@ -42,6 +42,7 @@ PRODUCT_COPY_FILES += \
     vendor/ldroid/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
     vendor/ldroid/prebuilt/common/bin/50-ldroid.sh:system/addon.d/50-ldroid.sh \
     vendor/ldroid/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
+    vendor/ldroid/prebuilt/common/bin/90-xposed.sh:system/addon.d/90-xposed.sh \
     vendor/ldroid/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
 # L-Droid-specific init file
