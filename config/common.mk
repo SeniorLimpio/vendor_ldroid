@@ -181,6 +181,14 @@ PRODUCT_PACKAGES += \
     libFFmpegExtractor \
     libnamparser
 
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
+#Use Prebuilt Chromium
+export USE_PREBUILT_CHROMIUM=1
+
 # easy way to extend to add more packages
 -include vendor/extra/product.mk
 
@@ -217,7 +225,6 @@ $(foreach size,$(bootanimation_sizes), $(call check_and_set_bootanimation,$(size
 PRODUCT_COPY_FILES += \
     vendor/ldroid/prebuilt/common/bootanimation/$(TARGET_BOOTANIMATION_NAME).zip:system/media/bootanimation.zip
 endif
-
 
 
 # Versioning System
