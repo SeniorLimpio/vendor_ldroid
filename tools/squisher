@@ -42,7 +42,7 @@ QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 DELETE_MEDIA="*.qmg"
 DELETE_APKS="LiveWallpapers.apk SpeechRecorder.apk VideoEditor.apk HoloSpiralWallpaper.apk MagicSmokeWallpapers.apk NoiseField.apk Galaxy4.apk OpenWnn.apk PinyinIME.apk"
-DELETE_PRIV_APKS="Launcher2.apk  VoiceDialer.apk"
+DELETE_PRIV_APKS="VoiceDialer.apk"
 DELETE_GALLERY="Gallery2.apk"
 DELETE_FONTS="MTLmr3m.ttf"
 
@@ -151,7 +151,7 @@ elif [ "$DEVICELCD" = "213" ]; then
     sed -i 's/ro.sf.lcd_density=213/ro.sf.lcd_density=182/g' $OUT/system/build.prop
 fi
 
-# Fix LCD Density for GNote
+# Device specific LCD Density fix
 DEVICEID=`sed -n -e'/ro\.product\.device/s/^.*=//p' $OUT/system/build.prop`
 if [ "$DEVICEID" = "SGH-I717" ]; then
    sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=268/g' $OUT/system/build.prop
@@ -163,6 +163,10 @@ elif [ "$DEVICEID" = "flo" ]; then
    sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=286/g' $OUT/system/build.prop
 elif [ "$DEVICEID" = "deb" ]; then
    sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=286/g' $OUT/system/build.prop
+elif [ "$DEVICEID" = "amami" ]; then
+   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=286/g' $OUT/system/build.prop
+elif [ "$DEVICEID" = "togari" ]; then
+   sed -i 's/ro.sf.lcd_density=245/ro.sf.lcd_density=300/g' $OUT/system/build.prop
 fi
 cp -f $OUT/system/build.prop $REPACK/ota/system/build.prop
 

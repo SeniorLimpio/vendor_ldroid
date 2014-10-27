@@ -145,6 +145,7 @@ PRODUCT_PACKAGES += \
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     SlimFileManager \
+    SlimLauncher \
     LatinIME \
     BluetoothExt \
     DashClock \
@@ -228,6 +229,7 @@ endif
 
 
 # Versioning System
+
 PRODUCT_VERSION_MAJOR = 3
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 2
