@@ -56,6 +56,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/ldroid/prebuilt/common/lib/libgif.so:system/lib/libgif.so
 
+# Copy libgif for Nova Launcher 3.0
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/lib/libgif.so:system/lib/libgif.so
+
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
     vendor/ldroid/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
@@ -145,7 +149,6 @@ PRODUCT_PACKAGES += \
 # Extra Optional packages
 PRODUCT_PACKAGES += \
     SlimFileManager \
-    SlimLauncher \
     LatinIME \
     BluetoothExt \
     DashClock \
