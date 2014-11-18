@@ -57,10 +57,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/ldroid/prebuilt/common/lib/libgif.so:system/lib/libgif.so
 
-# Copy libgif for Nova Launcher 3.0
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/lib/libgif.so:system/lib/libgif.so
-
 # SELinux filesystem labels
 PRODUCT_COPY_FILES += \
     vendor/ldroid/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel
@@ -234,9 +230,9 @@ endif
 
 # Versioning System
 
-PRODUCT_VERSION_MAJOR = 3
+PRODUCT_VERSION_MAJOR = 4
 PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = 2
+PRODUCT_VERSION_MAINTENANCE = 1
 ifdef LDROID_BUILD_EXTRA
     LDROID_POSTFIX := -$(LDROID_BUILD_EXTRA)
 
